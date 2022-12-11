@@ -6,8 +6,16 @@ const express= require('express')
 const app=express()
 app.use(express.static(__dirname+'/public')) //sa marche beha wella blech
 
+function testTime(day, hour) {
+    if (hour >= 9 && hour <= 17 && day !== 0 && day !== 6) return true;
+    return false;
+  }
 const authMiddelware=(req,res,next)=>{
-    const auth=false
+    const date = new Date();
+    const day = date.getDay();
+    const hour = date.getHours();
+    
+    const auth=(testTime(day,hour) )
     if(auth){
         console.log('user autorized')
         next()
