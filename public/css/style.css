@@ -1,0 +1,80 @@
+body{
+    background-color: blueviolet;
+    font: caption;
+}
+h1 {
+    color: white;
+    text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
+  }
+ 
+a:hover{
+    color: aliceblue;
+}
+a:active{
+    color: black;
+    cursor:alias;
+}
+
+a{
+    color: coral;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    padding: 24px;
+    
+}
+.box1 {
+    box-sizing: 46px;
+    box-shadow: -14px 6px rgb(245, 102, 102), 6px 12px rgb(82, 167, 92), 6px 16px rgb(72, 43, 177), 6px -24px black;
+    border-radius: 32%;
+    margin: 16%;
+    
+    background-color: greenyellow;
+    border-radius: 10px;
+    width: 100px;
+    height: 100px;
+  }
+  .box2 {
+    
+    box-sizing: 46px;
+    box-shadow: -14px 6px rgb(114, 102, 245), 6px 12px rgb(82, 167, 92), 6px 16px rgb(72, 43, 177), 6px -24px rgb(245, 245, 3);
+    border-radius: 32%;
+    margin: 16%;
+    
+    background-color: rgb(31, 170, 201);
+    border-radius: 10px;
+    width: 100px;
+    height: 100px;
+  }
+
+  .box3 {
+    box-sizing: 46px;
+    box-shadow: -14px 6px rgb(102, 245, 116), 6px 12px rgb(82, 167, 92), 6px 16px rgb(72, 43, 177), 6px -24px rgb(250, 248, 248);
+    border-radius: 32%;
+    margin: 16%;
+    
+    background-color: rgb(255, 47, 47);
+    border-radius: 10px;
+    width: 100px;
+    height: 100px;
+  }
+  .box1:hover {
+    animation-name: rotate;
+    animation-duration: 1.5s;
+  }
+  .box2:hover {
+    animation-name: rotate;
+    animation-duration: 2.5s;
+  }
+  .box3:hover{
+    animation-name: rotate;
+    animation-duration: 3.5s;
+  }
+  
+  
+  @keyframes rotate {
+    0% {
+      transform: rotate(0);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
