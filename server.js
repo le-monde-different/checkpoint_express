@@ -5,7 +5,7 @@ const express= require('express')
 
 const app=express()
 app.use(express.static(__dirname+'/public')) //sa marche beha wella blech
-
+app.set("view engine","ejs");
 function testTime(day, hour) {
     if (hour >= 9 && hour <= 17 && day !== 0 && day !== 6) return true;
     return false;
@@ -21,7 +21,8 @@ const authMiddelware=(req,res,next)=>{
         next()
     }else{
 
-        res.send('user is not authorized')
+        // res.send('user is not authorized')
+        res.render("date",{hour})
     }
 }
 
